@@ -51,8 +51,6 @@ export const getPineconeClient = () => {
     try {
       const embeddings = await getEmbeddings(doc.pageContent);
       const hash = md5(doc.pageContent);
-
-      console.log(`Embedding doc with text length: ${doc.metadata.text.length}`); 
   
       return {
         id: hash,
